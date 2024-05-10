@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7add6649;
+    transition: 0.6s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 50px 100px;
+    border-radius: 10px;
+}
+
+.flex-icon {
+    position: relative;
+    left: 150px;
+    top: -20px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #3baf14;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon:hover {
+    background-color: #66ef38;
+    transition: 0.6s;
+}
+
+.icon::before {
+    content: "\f186";
+    font-family: fontAwesome;
+    color: #fff;
+
+}
+
+.img img {
+    width: 200px;
+    border-radius: 100%;
+    border: 3px solid #21601f;
+    transition: 0.6s;
+}
+
+.text {
+    margin-bottom: 10px;
+    transition: 0.6s;
+}
+
+.text h1 {
+    color: #3baf14;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #3baf14;
+    border: transparent;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+/* DARK MODE */
+
+.main.dark {
+    background-color: #000000e3;
+    transition: 0.6s;
+}
+
+.main.dark .icon::before {
+    content: "\f185";
+}
+
+.main.dark .container {
+    background-color: #54565a;
+}
+
+.main.dark .img img {
+    border: 3px solid #b4d1ab;
+    transition: 0.6s;
+}
+
+.main.dark .text p {
+    color: #fff;
+    transition: 0.6s;
+}
+
+.main.dark button {
+    background-color: #79c360;
+    color: #213e1f;
+    font-weight: 500;
+    transition: 0.6s;
+}
+
+.main.dark button:hover {
+    background-color: #64b649;
+    color: #ffffff;
+}
+
+@media screen and (min-width:  280px) and (max-width: 600px) { /* MOBILE */  
+    
+    .flex-icon {
+        position: relative;
+        left: 110px;
+        top: -20px;
+    }
+    
+    .container {
+        width: 300px;
+        text-align: center;
+    }
+
+    .img img {
+        width: 150px;
+    }
+
+    .text h1 {
+        font-size: 20px;
+    }
+
+    .text p {
+        font-size: 16px;
+        width: 200px;
+    }
+
+    button {
+        padding: 10px 50px;
+        width: 230px;
+    }
+}
